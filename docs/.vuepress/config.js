@@ -1,6 +1,7 @@
 module.exports = {
   title: '阿娟蛋的个人博客',
   description: '阿娟蛋的个人博客',
+  base: '/vuepress-blog/',
   themeConfig:{
     nav:[
       {
@@ -25,13 +26,21 @@ module.exports = {
       },
       {
         title:'基础学习',
-        path:'/handbook/ConditionalTypes',
+        path:'/dom/DOMBase',
         collapsable:false,
         children:[
-          {title:'条件类型',path:'/handbook/ConditionalTypes'},
-          {title:'泛型',path:'/handbook/Generics'}
+          {title:'DOM初探',path:'/dom/DOMBase'},
+          {title:'document对象操作',path:'/dom/documentObject'}
         ]
       }
-    ]
+    ],
+    subSidebar: 'auto'
+  },
+  theme:'reco',
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
   }
+ 
 }
